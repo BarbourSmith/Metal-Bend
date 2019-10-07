@@ -6,17 +6,121 @@
             "x": 0,
             "y": 0,
             "uniqueID": 361918,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Attached Geometry",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Bent?",
+                    "ioValue": 1
+                },
+                {
+                    "name": "Thickness",
+                    "ioValue": 3
+                },
+                {
+                    "name": "Radius",
+                    "ioValue": 3
+                },
+                {
+                    "name": "Length",
+                    "ioValue": 30
+                }
+            ],
             "topLevel": true,
             "allAtoms": [
                 {
+                    "atomType": "Input",
+                    "name": "Attached Geometry",
+                    "x": 86,
+                    "y": 59,
+                    "uniqueID": 337926,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Bent?",
+                    "x": 93,
+                    "y": 98,
+                    "uniqueID": 940907,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Thickness",
+                    "x": 89,
+                    "y": 145,
+                    "uniqueID": 611727,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Length",
+                    "x": 87,
+                    "y": 179,
+                    "uniqueID": 168263,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Radius",
+                    "x": 86,
+                    "y": 216,
+                    "uniqueID": 184897,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Constant",
+                    "name": "Constant",
+                    "x": 84,
+                    "y": 264,
+                    "uniqueID": 465218,
+                    "ioValues": [
+                        {
+                            "name": "number",
+                            "ioValue": 0.4
+                        }
+                    ]
+                },
+                {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 473,
-                    "y": 146,
+                    "x": 386,
+                    "y": 148,
                     "uniqueID": 776125,
-                    "ioValues": [],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\n  return Sphere(40)        //return must be geometry;\n}\n\nreturn main(Input1, Input2)"
+                    "ioValues": [
+                        {
+                            "name": "kFactor",
+                            "ioValue": 0.4
+                        }
+                    ],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry){\n  \n  if(bent){\n    const arc = intersection(Square(100,100).front().right(), difference(Circle(interiorRadius+thickness),Circle(interiorRadius))).translate(0, interiorRadius, 0).extrude(length);\n    return assemble(arc.rotateX(90).translate(0,0,thickness), attachedGeometry);\n  }\n  else{\n    const partialCircumference = (3.1415*2*(interiorRadius+thickness*kFactor))/4;\n    const flatArc = Square(partialCircumference, thickness).right().front().extrude(length).rotateX(90).translate(0,0,thickness);\n    \n    const translatedTab = attachedGeometry.front().left().above().rotateY(90).translate(partialCircumference)\n    return assemble(flatArc, translatedTab);\n  }\n}\n\nreturn main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry)"
                 },
                 {
                     "atomType": "Output",
@@ -26,7 +130,43 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "attachedGeometry",
+                    "ap1ID": 337926,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "bent",
+                    "ap1ID": 940907,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "thickness",
+                    "ap1ID": 611727,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "length",
+                    "ap1ID": 168263,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number",
+                    "ap2Name": "kFactor",
+                    "ap1ID": 465218,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap1ID": 776125
+                }
+            ],
             "fileTypeVersion": 1
         }
     ],
