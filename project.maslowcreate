@@ -133,22 +133,6 @@
                     "uniqueID": 776125,
                     "ioValues": [
                         {
-                            "name": "length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "interiorRadius",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "thickness",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "bent",
-                            "ioValue": 10
-                        },
-                        {
                             "name": "kFactor",
                             "ioValue": 0.4
                         }
