@@ -9,19 +9,19 @@
             "ioValues": [
                 {
                     "name": "Bent?",
-                    "ioValue": 10
+                    "ioValue": 1
                 },
                 {
                     "name": "Thickness",
-                    "ioValue": 10
+                    "ioValue": 3
                 },
                 {
                     "name": "Length",
-                    "ioValue": 10
+                    "ioValue": 30
                 },
                 {
                     "name": "Radius",
-                    "ioValue": 10
+                    "ioValue": 3
                 }
             ],
             "topLevel": true,
@@ -48,7 +48,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": "1"
                         }
                     ]
                 },
@@ -61,7 +61,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": "3"
                         }
                     ]
                 },
@@ -74,7 +74,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": "30"
                         }
                     ]
                 },
@@ -87,7 +87,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": "3"
                         }
                     ]
                 },
@@ -132,6 +132,22 @@
                     "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
+                        {
+                            "name": "length",
+                            "ioValue": 30
+                        },
+                        {
+                            "name": "interiorRadius",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "thickness",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "bent",
+                            "ioValue": 1
+                        },
                         {
                             "name": "kFactor",
                             "ioValue": 0.4
