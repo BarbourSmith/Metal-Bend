@@ -52,7 +52,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 1
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -65,7 +65,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 3
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -78,7 +78,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 30
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -91,7 +91,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 3
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -136,22 +136,6 @@
                     "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
-                        {
-                            "name": "length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "interiorRadius",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "thickness",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "bent",
-                            "ioValue": 10
-                        },
                         {
                             "name": "kFactor",
                             "ioValue": 0.4
