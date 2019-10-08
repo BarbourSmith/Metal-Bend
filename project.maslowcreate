@@ -16,12 +16,12 @@
                     "ioValue": 3
                 },
                 {
-                    "name": "Bent?",
-                    "ioValue": 1
-                },
-                {
                     "name": "Interior Radius",
                     "ioValue": 7
+                },
+                {
+                    "name": "Bent?",
+                    "ioValue": 1
                 }
             ],
             "topLevel": true,
@@ -183,8 +183,8 @@
                 {
                     "atomType": "Output",
                     "name": "Output",
-                    "x": 1316,
-                    "y": 163.5,
+                    "x": 1059,
+                    "y": 164,
                     "ioValues": []
                 }
             ],
