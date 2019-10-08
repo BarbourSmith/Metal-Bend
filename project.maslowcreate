@@ -31,14 +31,14 @@
             "topLevel": true,
             "allAtoms": [
                 {
-                    "atomType": "Input",
-                    "name": "Attached Geometry",
-                    "x": 86,
-                    "y": 59,
-                    "uniqueID": 337926,
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 107,
+                    "y": 46,
+                    "uniqueID": 613317,
                     "ioValues": [
                         {
-                            "name": "default value",
+                            "name": "diameter",
                             "ioValue": 10
                         }
                     ]
@@ -96,6 +96,19 @@
                     ]
                 },
                 {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 232,
+                    "y": 57,
+                    "uniqueID": 831284,
+                    "ioValues": [
+                        {
+                            "name": "height",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
                     "atomType": "Constant",
                     "name": "Constant",
                     "x": 84,
@@ -109,36 +122,18 @@
                     ]
                 },
                 {
-                    "atomType": "Circle",
-                    "name": "Circle",
-                    "x": 280,
-                    "y": 63,
-                    "uniqueID": 613317,
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 366,
-                    "y": 80,
-                    "uniqueID": 831284,
-                    "ioValues": [
-                        {
-                            "name": "height",
-                            "ioValue": 10
-                        }
-                    ]
+                    "atomType": "Input",
+                    "name": "Attached Geometry",
+                    "x": 409,
+                    "y": 68,
+                    "uniqueID": 337926,
+                    "ioValues": []
                 },
                 {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 386,
-                    "y": 148,
+                    "x": 511,
+                    "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
                         {
@@ -167,12 +162,18 @@
                 {
                     "atomType": "Output",
                     "name": "Output",
-                    "x": 909,
+                    "x": 1316,
                     "y": 164,
                     "ioValues": []
                 }
             ],
             "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap1ID": 613317,
+                    "ap2ID": 831284
+                },
                 {
                     "ap1Name": "number or geometry",
                     "ap2Name": "bent",
@@ -198,21 +199,21 @@
                     "ap2ID": 776125
                 },
                 {
-                    "ap1Name": "number",
-                    "ap2Name": "kFactor",
-                    "ap1ID": 465218,
-                    "ap2ID": 776125
-                },
-                {
                     "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap1ID": 613317,
-                    "ap2ID": 831284
+                    "ap2Name": "default value",
+                    "ap1ID": 831284,
+                    "ap2ID": 337926
                 },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "attachedGeometry",
                     "ap1ID": 831284,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number",
+                    "ap2Name": "kFactor",
+                    "ap1ID": 465218,
                     "ap2ID": 776125
                 },
                 {
