@@ -52,7 +52,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 1
                         }
                     ]
                 },
@@ -65,7 +65,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 3
                         }
                     ]
                 },
@@ -78,7 +78,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 30
                         }
                     ]
                 },
@@ -91,7 +91,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 3
                         }
                     ]
                 },
@@ -103,10 +103,6 @@
                     "uniqueID": 831284,
                     "ioValues": [
                         {
-                            "name": "geometry",
-                            "ioValue": ""
-                        },
-                        {
                             "name": "height",
                             "ioValue": 10
                         }
@@ -114,9 +110,9 @@
                 },
                 {
                     "atomType": "Constant",
-                    "name": "Constant",
-                    "x": 84,
-                    "y": 264,
+                    "name": "K Factor",
+                    "x": 87,
+                    "y": 255,
                     "uniqueID": 465218,
                     "ioValues": [
                         {
@@ -131,12 +127,7 @@
                     "x": 409,
                     "y": 68,
                     "uniqueID": 337926,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
+                    "ioValues": []
                 },
                 {
                     "atomType": "Code",
@@ -146,8 +137,28 @@
                     "uniqueID": 776125,
                     "ioValues": [
                         {
+                            "name": "length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "interiorRadius",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "thickness",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "bent",
+                            "ioValue": 10
+                        },
+                        {
                             "name": "kFactor",
                             "ioValue": 0.4
+                        },
+                        {
+                            "name": "attachedGeometry",
+                            "ioValue": 10
                         }
                     ],
                     "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry){\n  \n  if(bent){\n    const arc = intersection(Square(100,100).front().right(), difference(Circle(interiorRadius+thickness),Circle(interiorRadius))).translate(0, interiorRadius, 0).extrude(length);\n    return assemble(arc.rotateX(90).translate(0,0,thickness), attachedGeometry);\n  }\n  else{\n    const partialCircumference = (3.1415*2*(interiorRadius+thickness*kFactor))/4;\n    const flatArc = Square(partialCircumference, thickness).right().front().extrude(length).rotateX(90).translate(0,0,thickness);\n    \n    const translatedTab = attachedGeometry.front().left().above().rotateY(90).translate(partialCircumference)\n    return assemble(flatArc, translatedTab);\n  }\n}\n\nreturn main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry)"
