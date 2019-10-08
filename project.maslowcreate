@@ -27,23 +27,10 @@
             "topLevel": true,
             "allAtoms": [
                 {
-                    "atomType": "Circle",
-                    "name": "Circle",
-                    "x": 107,
-                    "y": 46,
-                    "uniqueID": 613317,
-                    "ioValues": [
-                        {
-                            "name": "diameter",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
                     "atomType": "Input",
                     "name": "Length",
-                    "x": 101,
-                    "y": 105,
+                    "x": 111,
+                    "y": 147,
                     "uniqueID": 871647,
                     "ioValues": [
                         {
@@ -54,10 +41,10 @@
                 },
                 {
                     "atomType": "Input",
-                    "name": "Interior Radius",
-                    "x": 93,
-                    "y": 152,
-                    "uniqueID": 157920,
+                    "name": "Thickness",
+                    "x": 113,
+                    "y": 198,
+                    "uniqueID": 342634,
                     "ioValues": [
                         {
                             "name": "default value",
@@ -66,23 +53,27 @@
                     ]
                 },
                 {
-                    "atomType": "Input",
-                    "name": "Bent?",
-                    "x": 81,
-                    "y": 208,
-                    "uniqueID": 236311,
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 232,
+                    "y": 107,
+                    "uniqueID": 541028,
                     "ioValues": [
                         {
-                            "name": "default value",
-                            "ioValue": 1
+                            "name": "x length",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 30
                         }
                     ]
                 },
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 232,
-                    "y": 57,
+                    "x": 361,
+                    "y": 48,
                     "uniqueID": 831284,
                     "ioValues": [
                         {
@@ -93,10 +84,23 @@
                 },
                 {
                     "atomType": "Input",
-                    "name": "Thickness",
-                    "x": 83,
-                    "y": 259,
-                    "uniqueID": 342634,
+                    "name": "Bent?",
+                    "x": 519,
+                    "y": 223,
+                    "uniqueID": 236311,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 1
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Interior Radius",
+                    "x": 549,
+                    "y": 160,
+                    "uniqueID": 157920,
                     "ioValues": [
                         {
                             "name": "default value",
@@ -105,10 +109,18 @@
                     ]
                 },
                 {
+                    "atomType": "Input",
+                    "name": "Attached Geometry",
+                    "x": 656,
+                    "y": 58,
+                    "uniqueID": 159850,
+                    "ioValues": []
+                },
+                {
                     "atomType": "Constant",
                     "name": "K Factor",
-                    "x": 122,
-                    "y": 292,
+                    "x": 666,
+                    "y": 291,
                     "uniqueID": 465218,
                     "ioValues": [
                         {
@@ -118,18 +130,10 @@
                     ]
                 },
                 {
-                    "atomType": "Input",
-                    "name": "Attached Geometry",
-                    "x": 362,
-                    "y": 59,
-                    "uniqueID": 159850,
-                    "ioValues": []
-                },
-                {
                     "atomType": "Code",
                     "name": "Code",
-                    "x": 511,
-                    "y": 185,
+                    "x": 816,
+                    "y": 193,
                     "uniqueID": 776125,
                     "ioValues": [
                         {
@@ -158,22 +162,52 @@
                 {
                     "atomType": "Output",
                     "name": "Output",
-                    "x": 1059,
-                    "y": 164,
+                    "x": 1316,
+                    "y": 163.5,
                     "ioValues": []
                 }
             ],
             "allConnectors": [
                 {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap1ID": 613317,
-                    "ap2ID": 831284
-                },
-                {
                     "ap1Name": "number or geometry",
                     "ap2Name": "length",
                     "ap1ID": 871647,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "y length",
+                    "ap1ID": 871647,
+                    "ap2ID": 541028
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "thickness",
+                    "ap1ID": 342634,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "x length",
+                    "ap1ID": 342634,
+                    "ap2ID": 541028
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap1ID": 541028,
+                    "ap2ID": 831284
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "default value",
+                    "ap1ID": 831284,
+                    "ap2ID": 159850
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "bent",
+                    "ap1ID": 236311,
                     "ap2ID": 776125
                 },
                 {
@@ -184,32 +218,14 @@
                 },
                 {
                     "ap1Name": "number or geometry",
-                    "ap2Name": "bent",
-                    "ap1ID": 236311,
-                    "ap2ID": 776125
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "default value",
-                    "ap1ID": 831284,
-                    "ap2ID": 159850
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "thickness",
-                    "ap1ID": 342634,
+                    "ap2Name": "attachedGeometry",
+                    "ap1ID": 159850,
                     "ap2ID": 776125
                 },
                 {
                     "ap1Name": "number",
                     "ap2Name": "kFactor",
                     "ap1ID": 465218,
-                    "ap2ID": 776125
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "attachedGeometry",
-                    "ap1ID": 159850,
                     "ap2ID": 776125
                 },
                 {
