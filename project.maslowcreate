@@ -22,14 +22,6 @@
                 {
                     "name": "Thickness",
                     "ioValue": 3
-                },
-                {
-                    "name": "Something New",
-                    "ioValue": 10
-                },
-                {
-                    "name": "Does this save?",
-                    "ioValue": 10
                 }
             ],
             "topLevel": true,
@@ -134,19 +126,6 @@
                     "ioValues": []
                 },
                 {
-                    "atomType": "Input",
-                    "name": "Something New",
-                    "x": 344,
-                    "y": 291,
-                    "uniqueID": 333640,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
                     "atomType": "Code",
                     "name": "Code",
                     "x": 511,
@@ -175,19 +154,6 @@
                         }
                     ],
                     "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry){\n  \n  if(bent){\n    const arc = intersection(Square(100,100).front().right(), difference(Circle(interiorRadius+thickness),Circle(interiorRadius))).translate(0, interiorRadius, 0).extrude(length);\n    return assemble(arc.rotateX(90).translate(0,0,thickness), attachedGeometry);\n  }\n  else{\n    const partialCircumference = (3.1415*2*(interiorRadius+thickness*kFactor))/4;\n    const flatArc = Square(partialCircumference, thickness).right().front().extrude(length).rotateX(90).translate(0,0,thickness);\n    \n    const translatedTab = attachedGeometry.front().left().above().rotateY(90).translate(partialCircumference)\n    return assemble(flatArc, translatedTab);\n  }\n}\n\nreturn main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry)"
-                },
-                {
-                    "atomType": "Input",
-                    "name": "Does this save?",
-                    "x": 681,
-                    "y": 238,
-                    "uniqueID": 602180,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
                 },
                 {
                     "atomType": "Output",
