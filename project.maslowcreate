@@ -8,19 +8,11 @@
             "uniqueID": 361918,
             "ioValues": [
                 {
+                    "name": "Something New",
+                    "ioValue": 10
+                },
+                {
                     "name": "Bent?",
-                    "ioValue": 10
-                },
-                {
-                    "name": "Thickness",
-                    "ioValue": 10
-                },
-                {
-                    "name": "Length",
-                    "ioValue": 10
-                },
-                {
-                    "name": "Radius",
                     "ioValue": 10
                 },
                 {
@@ -28,7 +20,7 @@
                     "ioValue": 10
                 },
                 {
-                    "name": "Something New",
+                    "name": "Does this save?",
                     "ioValue": 10
                 }
             ],
@@ -50,52 +42,13 @@
                 {
                     "atomType": "Input",
                     "name": "Bent?",
-                    "x": 89,
-                    "y": 107,
-                    "uniqueID": 940907,
+                    "x": 98,
+                    "y": 144,
+                    "uniqueID": 236311,
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Input",
-                    "name": "Thickness",
-                    "x": 89,
-                    "y": 143,
-                    "uniqueID": 611727,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Input",
-                    "name": "Length",
-                    "x": 87,
-                    "y": 179,
-                    "uniqueID": 168263,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Input",
-                    "name": "Radius",
-                    "x": 86,
-                    "y": 216,
-                    "uniqueID": 184897,
-                    "ioValues": [
-                        {
-                            "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 42
                         }
                     ]
                 },
@@ -128,9 +81,9 @@
                 {
                     "atomType": "Input",
                     "name": "Attached Geometry",
-                    "x": 409,
-                    "y": 68,
-                    "uniqueID": 337926,
+                    "x": 362,
+                    "y": 59,
+                    "uniqueID": 159850,
                     "ioValues": []
                 },
                 {
@@ -154,6 +107,10 @@
                     "uniqueID": 776125,
                     "ioValues": [
                         {
+                            "name": "bent",
+                            "ioValue": 10
+                        },
+                        {
                             "name": "kFactor",
                             "ioValue": 0.4
                         },
@@ -163,6 +120,19 @@
                         }
                     ],
                     "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry){\n  \n  if(bent){\n    const arc = intersection(Square(100,100).front().right(), difference(Circle(interiorRadius+thickness),Circle(interiorRadius))).translate(0, interiorRadius, 0).extrude(length);\n    return assemble(arc.rotateX(90).translate(0,0,thickness), attachedGeometry);\n  }\n  else{\n    const partialCircumference = (3.1415*2*(interiorRadius+thickness*kFactor))/4;\n    const flatArc = Square(partialCircumference, thickness).right().front().extrude(length).rotateX(90).translate(0,0,thickness);\n    \n    const translatedTab = attachedGeometry.front().left().above().rotateY(90).translate(partialCircumference)\n    return assemble(flatArc, translatedTab);\n  }\n}\n\nreturn main(length, interiorRadius, thickness, bent, kFactor, attachedGeometry)"
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Does this save?",
+                    "x": 710,
+                    "y": 207,
+                    "uniqueID": 602180,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 42
+                        }
+                    ]
                 },
                 {
                     "atomType": "Output",
@@ -182,32 +152,14 @@
                 {
                     "ap1Name": "number or geometry",
                     "ap2Name": "bent",
-                    "ap1ID": 940907,
-                    "ap2ID": 776125
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "thickness",
-                    "ap1ID": 611727,
-                    "ap2ID": 776125
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "length",
-                    "ap1ID": 168263,
-                    "ap2ID": 776125
-                },
-                {
-                    "ap1Name": "number or geometry",
-                    "ap2Name": "interiorRadius",
-                    "ap1ID": 184897,
+                    "ap1ID": 236311,
                     "ap2ID": 776125
                 },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "default value",
                     "ap1ID": 831284,
-                    "ap2ID": 337926
+                    "ap2ID": 159850
                 },
                 {
                     "ap1Name": "number",
@@ -218,7 +170,7 @@
                 {
                     "ap1Name": "number or geometry",
                     "ap2Name": "attachedGeometry",
-                    "ap1ID": 337926,
+                    "ap1ID": 159850,
                     "ap2ID": 776125
                 },
                 {
