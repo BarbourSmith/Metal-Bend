@@ -26,6 +26,10 @@
                 {
                     "name": "Attached Geometry",
                     "ioValue": 10
+                },
+                {
+                    "name": "Something New",
+                    "ioValue": 10
                 }
             ],
             "topLevel": true,
@@ -128,6 +132,19 @@
                     "y": 68,
                     "uniqueID": 337926,
                     "ioValues": []
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Something New",
+                    "x": 344,
+                    "y": 291,
+                    "uniqueID": 333640,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 22
+                        }
+                    ]
                 },
                 {
                     "atomType": "Code",
