@@ -8,15 +8,15 @@
             "uniqueID": 361918,
             "ioValues": [
                 {
-                    "name": "Something New",
-                    "ioValue": 10
-                },
-                {
                     "name": "Bent?",
                     "ioValue": 10
                 },
                 {
                     "name": "Attached Geometry",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Something New",
                     "ioValue": 10
                 },
                 {
@@ -48,7 +48,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 42
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -95,7 +95,7 @@
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 22
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -106,10 +106,6 @@
                     "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
-                        {
-                            "name": "bent",
-                            "ioValue": 10
-                        },
                         {
                             "name": "kFactor",
                             "ioValue": 0.4
@@ -124,13 +120,13 @@
                 {
                     "atomType": "Input",
                     "name": "Does this save?",
-                    "x": 710,
-                    "y": 207,
+                    "x": 681,
+                    "y": 238,
                     "uniqueID": 602180,
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 42
+                            "ioValue": 10
                         }
                     ]
                 },
