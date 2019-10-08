@@ -22,6 +22,18 @@
                 {
                     "name": "Does this save?",
                     "ioValue": 10
+                },
+                {
+                    "name": "Thickness",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Interior Radius",
+                    "ioValue": 10
                 }
             ],
             "topLevel": true,
@@ -41,14 +53,40 @@
                 },
                 {
                     "atomType": "Input",
+                    "name": "Length",
+                    "x": 101,
+                    "y": 105,
+                    "uniqueID": 871647,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 30
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Interior Radius",
+                    "x": 93,
+                    "y": 152,
+                    "uniqueID": 157920,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 3
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Input",
                     "name": "Bent?",
-                    "x": 98,
-                    "y": 144,
+                    "x": 81,
+                    "y": 208,
                     "uniqueID": 236311,
                     "ioValues": [
                         {
                             "name": "default value",
-                            "ioValue": 10
+                            "ioValue": 1
                         }
                     ]
                 },
@@ -66,10 +104,23 @@
                     ]
                 },
                 {
+                    "atomType": "Input",
+                    "name": "Thickness",
+                    "x": 83,
+                    "y": 259,
+                    "uniqueID": 342634,
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 3
+                        }
+                    ]
+                },
+                {
                     "atomType": "Constant",
                     "name": "K Factor",
-                    "x": 87,
-                    "y": 255,
+                    "x": 122,
+                    "y": 292,
                     "uniqueID": 465218,
                     "ioValues": [
                         {
@@ -106,6 +157,22 @@
                     "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
+                        {
+                            "name": "length",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "interiorRadius",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "thickness",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "bent",
+                            "ioValue": 10
+                        },
                         {
                             "name": "kFactor",
                             "ioValue": 0.4
@@ -147,6 +214,18 @@
                 },
                 {
                     "ap1Name": "number or geometry",
+                    "ap2Name": "length",
+                    "ap1ID": 871647,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "interiorRadius",
+                    "ap1ID": 157920,
+                    "ap2ID": 776125
+                },
+                {
+                    "ap1Name": "number or geometry",
                     "ap2Name": "bent",
                     "ap1ID": 236311,
                     "ap2ID": 776125
@@ -156,6 +235,12 @@
                     "ap2Name": "default value",
                     "ap1ID": 831284,
                     "ap2ID": 159850
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "thickness",
+                    "ap1ID": 342634,
+                    "ap2ID": 776125
                 },
                 {
                     "ap1Name": "number",
