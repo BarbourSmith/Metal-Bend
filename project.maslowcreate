@@ -22,6 +22,10 @@
                 {
                     "name": "Radius",
                     "ioValue": 10
+                },
+                {
+                    "name": "Attached Geometry",
+                    "ioValue": 10
                 }
             ],
             "topLevel": true,
@@ -99,6 +103,10 @@
                     "uniqueID": 831284,
                     "ioValues": [
                         {
+                            "name": "geometry",
+                            "ioValue": ""
+                        },
+                        {
                             "name": "height",
                             "ioValue": 10
                         }
@@ -123,7 +131,12 @@
                     "x": 409,
                     "y": 68,
                     "uniqueID": 337926,
-                    "ioValues": []
+                    "ioValues": [
+                        {
+                            "name": "default value",
+                            "ioValue": 10
+                        }
+                    ]
                 },
                 {
                     "atomType": "Code",
@@ -132,22 +145,6 @@
                     "y": 185,
                     "uniqueID": 776125,
                     "ioValues": [
-                        {
-                            "name": "length",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "interiorRadius",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "thickness",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "bent",
-                            "ioValue": 10
-                        },
                         {
                             "name": "kFactor",
                             "ioValue": 0.4
