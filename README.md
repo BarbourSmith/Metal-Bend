@@ -4,6 +4,3 @@
 
 ![](/project.svg)
 
-## Metal Bend
-
-
